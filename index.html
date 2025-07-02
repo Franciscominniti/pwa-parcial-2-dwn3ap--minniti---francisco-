@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pokedex Online</title>
+  <link rel="stylesheet" href="style/main.css" />
+</head>
+<body>
+  <div id="connection-status" class="online">🟢 Estás conectado</div>
+
+  <header>
+    <h1>Pokedex Online</h1>
+    <p>Explorá el mundo Pokémon </p>
+  </header>
+
+  <main>
+    <input type="text" id="search" placeholder="🔍 Buscar Pokémon..." />
+    <section id="pokemon-list" class="grid">
+      <!-- Acá se van a cargar los pokémon -->
+    </section>
+  </main>
+
+  <script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('./sw.js')
+        .then(res => {
+          console.log('✅ Service Worker registrado:', res.scope);
+        })
+        .catch(err => {
+          console.error('❌ Error al registrar el Service Worker:', err);
+        });
+    });
+  }
+</script>
+
+
+  <script src="js/app.js"></script>
+</body>
+</html>

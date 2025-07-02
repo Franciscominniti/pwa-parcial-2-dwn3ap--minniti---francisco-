@@ -1,0 +1,24 @@
+.landing {
+  text-align: center;
+  padding: 3rem;
+  margin-top: 10vh;
+}
+
+.landing h1 {
+  font-size: 2.5rem;
+}
+
+.landing p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.landing .btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: #ffcb05;
+  color: #2a75bb;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 10px;
+}
